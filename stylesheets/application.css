@@ -5,9 +5,9 @@ h1, h2,
 p, ul, ol,
 form, blockquote { margin-bottom: 24px; }
 
-/*	Default: 768px */
+/*	Default: 1024px */
 html { background: #e5e5e5; }
-body { width: 768px; margin: 0 auto; }
+body { width: 1024px; margin: 0 auto; }
 header,
 #main,
 footer {
@@ -17,7 +17,7 @@ header {
 	float: left; width: 190px; }
 header a.logo { display: block; margin-bottom: 24px; padding: 48px 10px; background: #666; color: #fff; text-align: center; }
 #main {
-	float: left; width: 538px; margin: 0 0 20px 20px; }
+	float: left; width: 794px; margin: 0 0 20px 20px; }
 footer {
 	clear: both; }
 
@@ -25,15 +25,23 @@ footer {
 
 
 
-/* Widescreen: Over 1068px */
+/* Widescreen: Over 1200px */
 
-@media only screen and (min-width: 1068px) {
+@media only screen and (min-width: 1200px) {
 	
-	body { width: 1068px; }
-	#main { width: 838px; }
+	body { width: 1200px; }
+	#main { width: 970px; }
 	
 }
 
+/* iPad Portrait: 768px */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+	body {
+		width: 768px;
+		/* Prevents Mobile Safari from bumping up font sizes in landscape */
+		-webkit-text-size-adjust: 100%; }
+	#main { width: 538px; }
+}
 
 /* iPhone Landscape: 480px */
 @media only screen and (max-width: 767px) and (min-width: 480px) {
