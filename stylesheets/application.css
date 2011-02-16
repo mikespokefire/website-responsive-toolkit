@@ -1,0 +1,68 @@
+	/* Baseline + Typography setup */
+body {
+	font: 16px/24px 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; }
+h1, h2, 
+p, ul, ol,
+form, blockquote { margin-bottom: 24px; }
+
+/*	Default: 768px */
+html { background: #e5e5e5; }
+body { width: 768px; margin: 0 auto; }
+header,
+#main,
+footer {
+	border: 5px solid #c5c5c5;
+	background: #fff; }
+header {
+	float: left; width: 190px; }
+header a.logo { display: block; margin-bottom: 24px; padding: 48px 10px; background: #666; color: #fff; text-align: center; }
+#main {
+	float: left; width: 538px; margin: 0 0 20px 20px; }
+footer {
+	clear: both; }
+
+#map { height: 800px; }
+
+
+
+/* Widescreen: Over 1068px */
+
+@media only screen and (min-width: 1068px) {
+	
+	body { width: 1068px; }
+	#main { width: 838px; }
+	
+}
+
+
+/* iPhone Landscape: 480px */
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+	
+	body {
+		width: 480px;
+		/* Prevents Mobile Safari from bumping up font sizes in landscape */
+		-webkit-text-size-adjust: 100%; }
+	header { float: none; width: auto; margin: 0 0 24px; overflow: hidden; }
+	header a.logo { float: left; width: 150px; margin: 0 24px 0 0; }
+	header nav { float: left; width: 276px; }
+	header nav li { float: left; width: 114px; margin-right: 24px; }
+	#main { float: none; width: auto; margin: 0 0 24px; }
+	
+	#map { height: 600px; }
+	
+}
+
+
+/* iPhone Portrait: 320px */
+@media only screen and (max-width: 479px) {
+	
+	body {
+		width: 320px;
+		/* Prevents Mobile Safari from bumping up font sizes in landscape */
+		-webkit-text-size-adjust: 100%; }
+	header,
+	#main { float: none; width: auto; margin: 0 0 24px; }
+
+	#map { height: 480px; }
+
+}
